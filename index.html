@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gianni Majorenos — Network Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0E14;
+    --panel: #131A24;
+    --panel-border: #1F2937;
+    --amber: #E8A33D;
+    --amber-dim: #8A6528;
+    --cyan: #4FD1C5;
+    --text: #E6E8EB;
+    --muted: #6B7280;
+    --muted-2: #8B93A1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--amber); color: var(--bg); }
+  a { color: inherit; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(11, 14, 20, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--panel-border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .nav-brand {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px;
+    letter-spacing: 0.02em; display: flex; align-items: center; gap: 8px;
+  }
+  .dot-live {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan); animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .nav-links {
+    display: flex; gap: 26px; font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; color: var(--muted-2);
+  }
+  .nav-links a { text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--amber); }
+  .nav-links span { color: var(--muted); margin-right: 4px; }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; padding-top: 60px; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(232,163,61,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,163,61,0.025) 1px, transparent 1px);
+    background-size: 48px 48px; pointer-events: none;
+    mask-image: radial-gradient(ellipse at 30% 30%, black, transparent 70%);
+  }
+
+  .boot-log {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12.5px;
+    color: var(--muted); margin-bottom: 28px; min-height: 90px;
+  }
+  .boot-log div { opacity: 0; animation: fadeIn 0.4s forwards; }
+  .boot-log .ok { color: var(--cyan); }
+  .boot-log div:nth-child(1) { animation-delay: 0.1s; }
+  .boot-log div:nth-child(2) { animation-delay: 0.4s; }
+  .boot-log div:nth-child(3) { animation-delay: 0.7s; }
+  .boot-log div:nth-child(4) { animation-delay: 1.0s; }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: clamp(38px, 6.4vw, 72px); line-height: 1.03; letter-spacing: -0.02em;
+    opacity: 0; animation: riseIn 0.6s 1.3s forwards;
+  }
+  .hero h1 .accent { color: var(--amber); }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+  .hero .role {
+    font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: var(--muted-2);
+    margin-top: 18px; opacity: 0; animation: riseIn 0.6s 1.6s forwards;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .cursor { display: inline-block; width: 8px; height: 16px; background: var(--amber); animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .hero-stats { display: flex; gap: 40px; margin-top: 52px; flex-wrap: wrap; opacity: 0; animation: riseIn 0.6s 1.9s forwards; }
+  .stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 600; color: var(--text); }
+  .stat .label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+
+  .scroll-hint {
+    position: absolute; bottom: 36px; left: 32px; font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 8px;
+  }
+  .scroll-hint::before { content: ''; width: 16px; height: 1px; background: var(--muted); }
+
+  /* ---------- SECTION SHARED ---------- */
+  section { padding: 110px 0; border-top: 1px solid var(--panel-border); }
+  .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px; }
+  .section-head .tag { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--amber); }
+  .section-head h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 600; }
+
+  /* ---------- STATUS GRID (Skills) ---------- */
+  .status-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1px; background: var(--panel-border); border: 1px solid var(--panel-border);
+  }
+  .status-item { background: var(--panel); padding: 22px; transition: background 0.2s; }
+  .status-item:hover { background: #171F2B; }
+  .status-item .top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .status-item .name { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 500; }
+  .status-item .indicator { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 6px var(--cyan); flex-shrink: 0; }
+  .status-item .desc { font-size: 12.5px; color: var(--muted-2); font-family: 'IBM Plex Mono', monospace; line-height: 1.6; }
+
+  /* ---------- ACCESS LOG (Experience) ---------- */
+  .log { font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+  .log-entry {
+    display: grid; grid-template-columns: 150px 1fr; gap: 24px;
+    padding: 26px 0; border-top: 1px solid var(--panel-border);
+  }
+  .log-entry:first-child { border-top: none; }
+  .log-time { color: var(--muted); }
+  .log-time .status { color: var(--cyan); display: block; margin-top: 4px; font-size: 11px; }
+  .log-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+  .log-body h3 span { color: var(--amber); font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; }
+  .log-body .place { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted-2); margin-bottom: 12px; }
+  .log-body ul { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--muted-2); max-width: 620px; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+  .log-body ul li::marker { color: var(--amber-dim); }
+  @media (max-width: 640px) { .log-entry { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* ---------- PROJECTS ---------- */
+  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .project-card {
+    background: var(--panel); border: 1px solid var(--panel-border); padding: 26px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .project-card:hover { border-color: var(--amber-dim); transform: translateY(-2px); }
+  .project-card .ptag { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.05em; }
+  .project-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin: 10px 0 10px; }
+  .project-card p { font-size: 13.5px; color: var(--muted-2); }
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+  .cert-pill {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; padding: 10px 18px;
+    border: 1px solid var(--panel-border); background: var(--panel); color: var(--text);
+  }
+  .cert-pill.progress { color: var(--muted-2); border-style: dashed; }
+  .cert-pill.progress::before { content: '◌ '; color: var(--amber-dim); }
+  .cert-pill:not(.progress)::before { content: '● '; color: var(--cyan); }
+  .cert-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 36px 0 14px; }
+  .cert-sub:first-child { margin-top: 0; }
+
+  .edu-block { margin-top: 30px; }
+  .edu-block h3 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; }
+  .edu-block .place { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--amber); margin: 4px 0 10px; }
+  .edu-block p { font-size: 14px; color: var(--muted-2); max-width: 640px; }
+
+  /* ---------- CONTACT ---------- */
+  .ticket-box { background: var(--panel); border: 1px solid var(--panel-border); padding: 40px; }
+  .ticket-box .field-row {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; display: flex; gap: 12px;
+    padding: 10px 0; border-bottom: 1px dashed var(--panel-border); flex-wrap: wrap;
+  }
+  .ticket-box .field-row:last-child { border-bottom: none; }
+  .ticket-box .field-key { color: var(--muted); min-width: 90px; }
+  .ticket-box .field-val a { color: var(--amber); text-decoration: none; border-bottom: 1px solid var(--amber-dim); }
+  .ticket-box .field-val a:hover { border-color: var(--amber); }
+
+  footer { padding: 32px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    section { padding: 70px 0; }
+    .wrap { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-brand"><span class="dot-live"></span>G.MAJORENOS</div>
+    <div class="nav-links">
+      <a href="#skills"><span>01</span>Skills</a>
+      <a href="#log"><span>02</span>Experience</a>
+      <a href="#projects"><span>03</span>Projects</a>
+      <a href="#certs"><span>04</span>Certs</a>
+      <a href="#contact"><span>05</span>Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero wrap">
+  <div class="boot-log">
+    <div>&gt; initializing session<span class="ok"> ... OK</span></div>
+    <div>&gt; authenticating <span class="mono">gmajorenos</span><span class="ok"> ... OK</span></div>
+    <div>&gt; mounting network profile<span class="ok"> ... OK</span></div>
+    <div>&gt; access granted — welcome back</div>
+  </div>
+
+  <h1>Gianni Majorenos<br><span class="accent">Network Engineer</span></h1>
+
+  <div class="role">North Kansas City, MO · IT Support Analyst @ Bally's Interactive<span class="cursor"></span></div>
+
+  <div class="hero-stats">
+    <div class="stat"><div class="num">500+</div><div class="label">Accounts Administered</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">Tickets Resolved / Week</div></div>
+    <div class="stat"><div class="num">98%</div><div class="label">User Satisfaction</div></div>
+  </div>
+
+  <div class="scroll-hint">SCROLL TO EXPLORE</div>
+</section>
+
+<section id="skills" class="wrap">
+  <div class="section-head">
+    <span class="tag">01 /</span>
+    <h2>Technical &amp; Professional Skills</h2>
+  </div>
+  <div class="status-grid">
+    <div class="status-item">
+      <div class="top-row"><span class="name">Operating Systems &amp; Devices</span><span class="indicator"></span></div>
+      <div class="desc">Windows 10/11, Windows Server 2019, VMware, PC, laptop, mobile devices</div>
+    </div>
+    <div class="status-item">
+      <div class="top-row"><span class="name">End-User Support &amp; Tools</span><span class="indicator"></span></div>
+      <div class="desc">Microsoft 365, OneDrive, ServiceNow, Spiceworks Cloud Help Desk, Slack, Teams, Zoom, SharePoint</div>
+    </div>
+    <div class="status-item">
+      <div class="top-row"><span class="name">Networking &amp; Security</span><span class="indicator"></span></div>
+      <div class="desc">TCP/IP, DNS, network shares, Active Directory, security audits, device hardening</div>
+    </div>
+    <div class="status-item">
+      <div class="top-row"><span class="name">Professional Skills</span><span class="indicator"></span></div>
+      <div class="desc">Troubleshooting, technical documentation (OneNote), client relations, communication, collaboration</div>
+    </div>
+  </div>
+</section>
+
+<section id="log" class="wrap">
+  <div class="section-head">
+    <span class="tag">02 /</span>
+    <h2>Access Log — Experience</h2>
+  </div>
+  <div class="log">
+    <div class="log-entry">
+      <div class="log-time">10/2024 — Present<span class="status">● ACTIVE</span></div>
+      <div class="log-body">
+        <h3>IT Support Analyst <span>· Full-time</span></h3>
+        <div class="place">Bally's Interactive</div>
+        <ul>
+          <li>Provide onsite IT support for Windows 10/11 and VMware environments, ensuring uninterrupted operations</li>
+          <li>Manage imaging, re-imaging, and post-imaging of desktops and laptops while enforcing security and compliance standards</li>
+          <li>Conduct system security audits, identify vulnerabilities, and ensure regulatory compliance</li>
+          <li>Respond to 50+ service desk tickets weekly, prioritizing critical issues to maintain casino operations</li>
+          <li>Collaborate with IT teams on process improvements, reducing recurring technical issues by 20%</li>
+          <li>Onboarded 50+ new employees, managing device provisioning and access permissions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-time">12/2023 — 08/2024<span class="status">● ARCHIVED</span></div>
+      <div class="log-body">
+        <h3>Enterprise Service Desk Analyst <span>· Contract</span></h3>
+        <div class="place">USMC Cyber Operations Group — Leidos Inc.</div>
+        <ul>
+          <li>Delivered technical support to a global user base, resolving network and user issues</li>
+          <li>Administered Active Directory and Office 365, managing 500+ user accounts and access permissions</li>
+          <li>Improved ticket resolution time by 15% through streamlined troubleshooting processes</li>
+          <li>Troubleshot peripheral issues (printer, scanner, VOIP, card reader, cell phone) and administered network shares</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-time">08/2023 — 12/2023<span class="status">● ARCHIVED</span></div>
+      <div class="log-body">
+        <h3>IT Support <span>· Contract</span></h3>
+        <div class="place">Children's Mercy Hospital — Kansas City, MO</div>
+        <ul>
+          <li>Supported hardware, software, and network issues, achieving a 98% user satisfaction rate</li>
+          <li>Led imaging and re-imaging of desktops and laptops, ensuring compliance with security standards</li>
+          <li>Resolved issues related to TCP/IP, DNS, and other network protocols</li>
+          <li>Tracked device compliance (BIOS, BitLocker, stale devices) and managed cable infrastructure</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-time">01/2023 — 02/2023<span class="status">● ARCHIVED</span></div>
+      <div class="log-body">
+        <h3>IT Field Technician — Epic <span>· Contract</span></h3>
+        <div class="place">Advent Health — Merriam, KS</div>
+        <ul>
+          <li>Traveled to hospitals, clinics, and physician offices to set up Epic-compatible workstations and printers</li>
+          <li>Followed test scripts to identify and resolve end-user workflow issues in Epic</li>
+          <li>Documented testing results using the Epic TDR Result Editor tool and simulated nurse workflows</li>
+          <li>Communicated progress via the Technical Dress Rehearsal (TDR) Bridge Line</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  <div class="section-head">
+    <span class="tag">03 /</span>
+    <h2>Projects</h2>
+  </div>
+  <div class="projects">
+    <div class="project-card">
+      <div class="ptag">Network Lab</div>
+      <h3>Multi-Tier Enterprise Network</h3>
+      <p>Designed and deployed a lab using Cisco ISR4331, Catalyst 3750X, and Catalyst 2960-CG hardware, simulating a production environment with 4 VLANs, inter-VLAN routing, and segmented access control.</p>
+    </div>
+    <div class="project-card">
+      <div class="ptag">Routing</div>
+      <h3>OSPF &amp; WAN Simulation</h3>
+      <p>Configured OSPF dynamic routing across Layer 3 devices, with route summarization and passive interfaces to simulate enterprise WAN connectivity.</p>
+    </div>
+    <div class="project-card">
+      <div class="ptag">NAT / Security</div>
+      <h3>NAT/PAT &amp; ACL Hardening</h3>
+      <p>Implemented NAT/PAT on the ISR4331 for simulated internet access across VLANs, verified with show commands and Wireshark captures. Applied extended ACLs and SSH-only VTY hardening on a least-privilege basis.</p>
+    </div>
+    <div class="project-card">
+      <div class="ptag">Monitoring</div>
+      <h3>SNMPv3 &amp; Syslog Pipeline</h3>
+      <p>Deployed SNMPv3 and a Syslog monitoring pipeline to a Linux-based server, enabling real-time alerting and network event logging across managed devices.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certs" class="wrap">
+  <div class="section-head">
+    <span class="tag">04 /</span>
+    <h2>Certifications &amp; Education</h2>
+  </div>
+
+  <div class="cert-sub">Certified</div>
+  <div class="cert-grid">
+    <div class="cert-pill">A+</div>
+    <div class="cert-pill">CCNA</div>
+    <div class="cert-pill">CCNP ENCORE</div>
+    <div class="cert-pill">Security+</div>
+    <div class="cert-pill">AZ-900</div>
+    <div class="cert-pill">ITIL4</div>
+    <div class="cert-pill">Project+</div>
+  </div>
+
+  <div class="cert-sub">In Progress</div>
+  <div class="cert-grid">
+    <div class="cert-pill progress">CySA+</div>
+    <div class="cert-pill progress">PenTest+</div>
+    <div class="cert-pill progress">CASP+</div>
+    <div class="cert-pill progress">CCNP Security</div>
+  </div>
+
+  <div class="edu-block">
+    <h3>Cloud and Security Specialist Program</h3>
+    <div class="place">Centriq Training · Graduated 12/16/2022</div>
+    <p>Intensive lab and project-focused training emphasizing Windows configuration, networking, service desk support, cloud services (Azure), network security, and business communication. Included foundational work in device/network hardening, vulnerability scanning, traffic analysis, and technical documentation.</p>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <div class="section-head">
+    <span class="tag">05 /</span>
+    <h2>Open a Ticket</h2>
+  </div>
+  <div class="ticket-box">
+    <div class="field-row"><span class="field-key">EMAIL:</span><span class="field-val"><a href="mailto:majorenosg365@outlook.com">majorenosg365@outlook.com</a></span></div>
+    <div class="field-row"><span class="field-key">PHONE:</span><span class="field-val"><a href="tel:9138325517">913-832-5517</a></span></div>
+    <div class="field-row"><span class="field-key">LOCATION:</span><span class="field-val">North Kansas City, Missouri</span></div>
+    <div class="field-row"><span class="field-key">STATUS:</span><span class="field-val">Open to Network Engineer opportunities</span></div>
+  </div>
+</section>
+
+<footer>© 2026 GIANNI MAJORENOS — SESSION CLOSED</footer>
+
+</body>
+</html>
