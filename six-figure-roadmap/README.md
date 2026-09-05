@@ -1,14 +1,16 @@
 # Gianni's Six-Figure IT Career Roadmap
 
-A responsive, single-page career roadmap built from Gianni's supplied IT support résumé. It maps a realistic path from $25.24/hour to remote cloud/network infrastructure roles paying $100,000+.
+A responsive, one-page cyberpunk career roadmap built from Gianni's supplied IT support résumé. It maps a realistic path from $25.24/hour to remote cloud/network infrastructure roles paying $100,000+.
 
-## Site
+## Deploy
 
-The deployable static site lives in `dist/` and has no build dependencies.
+[Deploy this roadmap on Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGabmars2026%2FResume%2Ftree%2Fmain%2Fsix-figure-roadmap&project-name=gianni-six-figure-roadmap)
+
+The deployable static site files are in this folder and have no build dependencies.
 
 ## Local preview
 
-Serve `dist/` with any static web server.
+Serve this folder with any static web server.
 
 ## Data freshness
 
