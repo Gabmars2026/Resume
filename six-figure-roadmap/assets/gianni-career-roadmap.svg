@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2560" viewBox="0 0 1440 2560" role="img" aria-labelledby="title desc">
+  <title id="title">Gianni's roadmap from IT support to a six-figure salary</title>
+  <desc id="desc">Four-stage career timeline from the current IT Support Analyst role at 25 dollars and 24 cents per hour to a cloud network, infrastructure, or security engineer role paying 105 to 135 thousand dollars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07101f"/>
+      <stop offset="0.56" stop-color="#050812"/>
+      <stop offset="1" stop-color="#11071a"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5cf8ff"/>
+      <stop offset="0.58" stop-color="#9a7cff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <linearGradient id="headline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5cf8ff"/>
+      <stop offset="0.56" stop-color="#9a7cff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" fill="none" stroke="#5cf8ff" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="2560" fill="url(#bg)"/>
+  <rect width="1440" height="2560" fill="url(#grid)"/>
+  <circle cx="190" cy="130" r="300" fill="#3176ff" opacity="0.08"/>
+  <circle cx="1310" cy="330" r="320" fill="#ff4fd8" opacity="0.07"/>
+
+  <text x="90" y="92" fill="#5cf8ff" font-family="Consolas, monospace" font-size="25" font-weight="700" letter-spacing="4">CAREER.OS // SEP 2026</text>
+  <text x="90" y="190" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="-2">GIANNI'S PATH TO</text>
+  <text x="90" y="282" fill="url(#headline)" font-family="Segoe UI, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="-4">$100K+ IN IT</text>
+
+  <rect x="90" y="340" width="1260" height="150" rx="20" fill="#10182c" fill-opacity="0.88" stroke="#5cf8ff" stroke-opacity="0.28"/>
+  <text x="130" y="396" fill="#94a7bd" font-family="Consolas, monospace" font-size="21" font-weight="700" letter-spacing="2">CURRENT BASE</text>
+  <text x="130" y="454" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="800">$25.24/hr  ·  ~$52,499/year</text>
+  <text x="1000" y="396" fill="#94a7bd" font-family="Consolas, monospace" font-size="21" font-weight="700" letter-spacing="2">REALISTIC TIME</text>
+  <text x="1000" y="454" fill="#b4ff67" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">30-48 months</text>
+
+  <rect x="152" y="576" width="8" height="1652" rx="4" fill="url(#rail)" filter="url(#glow)" opacity="0.86"/>
+
+  <g>
+    <rect x="98" y="568" width="116" height="116" rx="26" fill="#050812" stroke="#b4ff67" stroke-width="3"/>
+    <text x="156" y="641" text-anchor="middle" fill="#b4ff67" font-family="Consolas, monospace" font-size="36" font-weight="900">00</text>
+    <rect x="254" y="548" width="1096" height="390" rx="24" fill="#10182c" fill-opacity="0.92" stroke="#b4ff67" stroke-opacity="0.42"/>
+    <text x="300" y="606" fill="#b4ff67" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">NOW // APPLY IMMEDIATELY</text>
+    <text x="300" y="669" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">IT Support Analyst · Bally's</text>
+    <text x="300" y="722" fill="#a9fbff" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">$25.24/hr · ~$52.5K/year</text>
+    <text x="300" y="782" fill="#bac9d9" font-family="Segoe UI, Arial, sans-serif" font-size="25">
+      <tspan x="300" dy="0">• Keep the job until you accept a written offer.</tspan>
+      <tspan x="300" dy="42">• Request Entra, Intune, VMware, patching, network, and PowerShell work.</tspan>
+      <tspan x="300" dy="42">• Record measurable wins: tickets, users, uptime, time saved, devices.</tspan>
+    </text>
+    <text x="300" y="901" fill="#b4ff67" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">EXIT GATE: Nearly 2 years at Bally's is enough. Start applying now.</text>
+  </g>
+
+  <g>
+    <rect x="98" y="988" width="116" height="116" rx="26" fill="#050812" stroke="#5cf8ff" stroke-width="3"/>
+    <text x="156" y="1061" text-anchor="middle" fill="#5cf8ff" font-family="Consolas, monospace" font-size="36" font-weight="900">01</text>
+    <rect x="254" y="968" width="1096" height="408" rx="24" fill="#0d172b" fill-opacity="0.94" stroke="#5cf8ff" stroke-opacity="0.36"/>
+    <text x="300" y="1026" fill="#5cf8ff" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">TARGET BY MAR 2027 // NEXT MOVE</text>
+    <text x="300" y="1089" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="800">Remote L2 Support / Junior Systems Admin</text>
+    <text x="300" y="1142" fill="#a9fbff" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">Target $65K-$85K · approximately $31-$41/hr</text>
+    <text x="300" y="1202" fill="#bac9d9" font-family="Segoe UI, Arial, sans-serif" font-size="25">
+      <tspan x="300" dy="0">• Choose jobs with cloud, server, identity, network, log, or API ownership.</tspan>
+      <tspan x="300" dy="42">• Learn Linux, PowerShell, SQL, REST APIs, and technical log analysis.</tspan>
+      <tspan x="300" dy="42">• Earn AZ-104 and publish two sanitized technical case studies.</tspan>
+    </text>
+    <text x="300" y="1336" fill="#5cf8ff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STAY 18-24 MONTHS, or until you prove administrator-level ownership.</text>
+  </g>
+
+  <g>
+    <rect x="98" y="1426" width="116" height="116" rx="26" fill="#050812" stroke="#9a7cff" stroke-width="3"/>
+    <text x="156" y="1499" text-anchor="middle" fill="#b9a8ff" font-family="Consolas, monospace" font-size="36" font-weight="900">02</text>
+    <rect x="254" y="1406" width="1096" height="408" rx="24" fill="#131429" fill-opacity="0.94" stroke="#9a7cff" stroke-opacity="0.42"/>
+    <text x="300" y="1464" fill="#b9a8ff" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">2028-2029 // BUILD DEPTH</text>
+    <text x="300" y="1527" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="800">Cloud / Network Admin or Systems Engineer</text>
+    <text x="300" y="1580" fill="#d5ccff" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">Target $85K-$105K</text>
+    <text x="300" y="1640" fill="#bac9d9" font-family="Segoe UI, Arial, sans-serif" font-size="25">
+      <tspan x="300" dy="0">• Own production changes, monitoring, VPNs, Azure, identity, and incidents.</tspan>
+      <tspan x="300" dy="42">• Automate work with PowerShell or Python and measure hours saved.</tspan>
+      <tspan x="300" dy="42">• Earn AZ-700; finish a CCNP concentration if still needed.</tspan>
+    </text>
+    <text x="300" y="1774" fill="#b9a8ff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STAY 18-30 MONTHS. Seek an internal promotion before another move.</text>
+  </g>
+
+  <g>
+    <rect x="98" y="1864" width="116" height="116" rx="26" fill="#050812" stroke="#ff4fd8" stroke-width="3"/>
+    <text x="156" y="1937" text-anchor="middle" fill="#ff86e4" font-family="Consolas, monospace" font-size="36" font-weight="900">03</text>
+    <rect x="254" y="1844" width="1096" height="408" rx="24" fill="#21122d" fill-opacity="0.94" stroke="#ff4fd8" stroke-opacity="0.46"/>
+    <text x="300" y="1902" fill="#ff86e4" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">REALISTIC 2029-2030 // $100K UNLOCKED</text>
+    <text x="300" y="1965" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="800">Cloud Network / Infrastructure Engineer</text>
+    <text x="300" y="2018" fill="#ffb4ec" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">Target $105K-$135K+</text>
+    <text x="300" y="2078" fill="#c6bbcf" font-family="Segoe UI, Arial, sans-serif" font-size="25">
+      <tspan x="300" dy="0">• Design reliable hybrid systems instead of only responding to tickets.</tspan>
+      <tspan x="300" dy="42">• Lead migrations, outages, automation, hardening, or network redesigns.</tspan>
+      <tspan x="300" dy="42">• Negotiate total compensation, benefits, and the real on-call load.</tspan>
+    </text>
+    <text x="300" y="2212" fill="#ff86e4" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STAY 2-4 YEARS while responsibility, learning, and pay keep growing.</text>
+  </g>
+
+  <rect x="90" y="2310" width="1260" height="154" rx="22" fill="#0d1528" stroke="#5cf8ff" stroke-opacity="0.25"/>
+  <text x="130" y="2362" fill="#94a7bd" font-family="Consolas, monospace" font-size="21" font-weight="700" letter-spacing="2">CERTIFICATION SEQUENCE</text>
+  <text x="130" y="2425" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="800">AZ-104  →  AZ-700  →  Finish CCNP Enterprise if needed</text>
+  <text x="90" y="2521" fill="#94a7bd" font-family="Segoe UI, Arial, sans-serif" font-size="22">Planning ranges, not salary guarantees · Built from the supplied résumé · Reviewed Sep 5, 2026</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2048" viewBox="0 0 1440 2048" role="img" aria-labelledby="title desc">
+  <title id="title">Gianni's 90-day plan for moving into a remote IT role</title>
+  <desc id="desc">Four-part action plan covering résumé repair, technical labs, focused remote job applications, and interview preparation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111e"/><stop offset="0.6" stop-color="#050812"/><stop offset="1" stop-color="#17091f"/></linearGradient>
+    <linearGradient id="headline" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5cf8ff"/><stop offset="0.55" stop-color="#9a7cff"/><stop offset="1" stop-color="#ff4fd8"/></linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#5cf8ff" stroke-opacity="0.045"/></pattern>
+  </defs>
+  <rect width="1440" height="2048" fill="url(#bg)"/>
+  <rect width="1440" height="2048" fill="url(#grid)"/>
+  <circle cx="1300" cy="100" r="360" fill="#ff4fd8" opacity="0.07"/>
+  <text x="86" y="90" fill="#5cf8ff" font-family="Consolas, monospace" font-size="24" font-weight="800" letter-spacing="4">EXECUTION SPRINT // START NOW</text>
+  <text x="86" y="190" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-3">THE NEXT 90 DAYS</text>
+  <text x="86" y="268" fill="url(#headline)" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">Get remote. Gain ownership. Build toward $100K+.</text>
+
+  <g transform="translate(86 340)">
+    <rect width="1268" height="332" rx="22" fill="#0e1b31" stroke="#5cf8ff" stroke-opacity="0.4"/>
+    <rect width="14" height="332" rx="7" fill="#5cf8ff"/>
+    <text x="54" y="60" fill="#5cf8ff" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">WEEKS 1-2</text>
+    <text x="54" y="124" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">Repair your positioning</text>
+    <text x="54" y="184" fill="#bac9d9" font-family="Segoe UI, Arial, sans-serif" font-size="27">
+      <tspan x="54" dy="0">• Build a two-page ATS résumé for remote L2 and support engineer roles.</tspan>
+      <tspan x="54" dy="43">• Fix certification names; clearly separate earned from studying.</tspan>
+      <tspan x="54" dy="43">• Create an achievement bank with 10 measurable work stories.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(86 700)">
+    <rect width="1268" height="332" rx="22" fill="#11182f" stroke="#82b6ff" stroke-opacity="0.42"/>
+    <rect width="14" height="332" rx="7" fill="#82b6ff"/>
+    <text x="54" y="60" fill="#9ec8ff" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">WEEKS 3-6</text>
+    <text x="54" y="124" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">Build proof, not just badges</text>
+    <text x="54" y="184" fill="#bac9d9" font-family="Segoe UI, Arial, sans-serif" font-size="27">
+      <tspan x="54" dy="0">• Azure: Entra groups, VNet, subnets, NSGs, VM, monitoring, backup.</tspan>
+      <tspan x="54" dy="43">• Support: Linux VM, Docker, logs, REST API/Postman, and SQL.</tspan>
+      <tspan x="54" dy="43">• Publish one incident report and one PowerShell automation case study.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(86 1060)">
+    <rect width="1268" height="332" rx="22" fill="#17142f" stroke="#9a7cff" stroke-opacity="0.48"/>
+    <rect width="14" height="332" rx="7" fill="#9a7cff"/>
+    <text x="54" y="60" fill="#b9a8ff" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">WEEKS 7-10</text>
+    <text x="54" y="124" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">Apply with focus</text>
+    <text x="54" y="184" fill="#c1bad0" font-family="Segoe UI, Arial, sans-serif" font-size="27">
+      <tspan x="54" dy="0">• Send 8-12 tailored applications each week within 72 hours.</tspan>
+      <tspan x="54" dy="43">• Prioritize $65K+ roles with real admin or engineering exposure.</tspan>
+      <tspan x="54" dy="43">• Ask for three referrals or recruiter conversations every week.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(86 1420)">
+    <rect width="1268" height="332" rx="22" fill="#25142e" stroke="#ff4fd8" stroke-opacity="0.5"/>
+    <rect width="14" height="332" rx="7" fill="#ff4fd8"/>
+    <text x="54" y="60" fill="#ff8ee7" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">WEEKS 11-13</text>
+    <text x="54" y="124" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="800">Convert interviews into offers</text>
+    <text x="54" y="184" fill="#c8bac8" font-family="Segoe UI, Arial, sans-serif" font-size="27">
+      <tspan x="54" dy="0">• Drill Windows, AD, DNS, DHCP, TCP/IP, M365, VPN, and outages.</tspan>
+      <tspan x="54" dy="43">• Prepare four STAR stories: incident, user, improvement, and mistake.</tspan>
+      <tspan x="54" dy="43">• Target $72K-$82K and do not volunteer your current pay.</tspan>
+    </text>
+  </g>
+
+  <rect x="86" y="1795" width="1268" height="174" rx="20" fill="#0e1729" stroke="#b4ff67" stroke-opacity="0.35"/>
+  <text x="126" y="1847" fill="#b4ff67" font-family="Consolas, monospace" font-size="22" font-weight="800" letter-spacing="2">NON-NEGOTIABLE</text>
+  <text x="126" y="1902" fill="#edf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">
+    <tspan x="126" dy="0">Keep your current job until the background check clears</tspan>
+    <tspan x="126" dy="38">and the written offer is final.</tspan>
+  </text>
+  <text x="86" y="2017" fill="#94a7bd" font-family="Segoe UI, Arial, sans-serif" font-size="21">Personal plan based on the supplied résumé · Reviewed September 5, 2026</text>
+</svg>
